@@ -1,3 +1,5 @@
 {
-    "editor.fontFamily": "Monaco, Consolas, 'Courier New', monospace"
+    "editor.fontFamily": "Monaco, Consolas, 'Courier New', monospace",
+    "files.autoSave": "afterDelay",
+    "html.format.wrapAttributes": "force-aligned"
 }
