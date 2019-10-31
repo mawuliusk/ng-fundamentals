@@ -1,10 +1,14 @@
-import { Injectable, Output } from '@angular/core';
+import { Injectable, Output, Inject } from '@angular/core';
 import { Subject, Observable } from 'rxjs';
 import { IEvent, ISession } from './event.model';
 import { EventEmitter } from 'protractor';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class EventService {
+    constructor(@Inject(HttpClient) private http: HttpClient){
+
+    }
     getEvents(): Observable<IEvent[]> {
         let subject = new Subject<IEvent[]>();
         setTimeout(() => {
